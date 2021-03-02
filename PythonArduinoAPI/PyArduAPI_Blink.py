@@ -4,11 +4,11 @@ import time
 
 Nano = Arduino()
 
-Nano.pinMode(13, "OUTPUT")
+Nano.pinMode(13, 'OUTPUT')
 i=0
 while i<10:
-    Nano.digitalWrite(13, "HIGH")
+    Nano.digitalWrite(13, 'HIGH')
     time.sleep(1)
-    Nano.digitalWrite(13, "LOW")
+    Nano.digitalWrite(13, 'LOW')
     time.sleep(1)
     i += 1

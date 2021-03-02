@@ -105,10 +105,10 @@ void loop() {
     //TIMSK0 = 0; TCNT0 = 0; TIFR0 = 0;
     while (!(cmd_addr & 0x01)){
       //if (!TIFR0) PORTB=32;
-      PORTB=32;
+      PORTB=PORTB;
     }
     if (cmd_addr & 1) doNextCmd();
-    PORTB=0;
+    PORTB=PORTB;
   }
   //TIMSK0 = 1;
 }
